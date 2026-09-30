@@ -1,0 +1,65 @@
+export type Sport = { id: string; emoji: string; name: string };
+export type City = {
+  id: number;
+  name: string;
+  slug: string;
+  is_active: boolean;
+};
+export type Participant = {
+  id: number;
+  name: string;
+  avatar_url: string | null;
+};
+export type Activity = {
+  id: number;
+  city_id: number;
+  organizer_id: number;
+  sport_type: string;
+  title: string;
+  description: string;
+  start_datetime: string;
+  location_name: string;
+  address: string;
+  latitude: number;
+  longitude: number;
+  level: string;
+  price: number;
+  max_participants: number;
+  created_at: string;
+  participant_count: number;
+  is_joined: boolean;
+  organizer_name: string;
+  participants: Participant[];
+};
+export type Event = {
+  id: number;
+  city_id: number;
+  sport_type: string;
+  title: string;
+  description: string;
+  start_datetime: string;
+  location_name: string;
+  address: string;
+  latitude: number;
+  longitude: number;
+  price: number;
+  registration_url: string;
+  organizer: string;
+  image_url: string | null;
+};
+export type User = {
+  id: number;
+  max_user_id: string | null;
+  first_name: string;
+  last_name: string | null;
+  username: string | null;
+  name: string;
+  avatar_url: string | null;
+  city_id: number | null;
+  created_at: string;
+  updated_at: string;
+  sports: string[];
+  activities_count: number;
+  organized_count: number;
+  visited_count: number;
+};
